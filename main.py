@@ -130,10 +130,54 @@ class Shape:
             t.forward(self.FORWARD_MOVE)
         t.right(self.angle_degree)
 
+# triangle_angle = 120
+# square_angle = 90
+# pentagon_angle = 72
+# hexagon_angle = 60
+# heptagon_angle = 180 - 128.571
+# octagon_angle = 180 - 135
+# nonagon_angle = 180 - 140
+# decagon_angle = 180 - 144
+
 # triangle shape
 triangle = Shape(120, 3)
 triangle.first_move(scooby_the_turtle)
 triangle.drawing_shape_function(scooby_the_turtle)
+
+# square shape
+square = Shape(90, 4)
+square.first_move(scooby_the_turtle)
+square.drawing_shape_function(scooby_the_turtle)
+
+# pentagram shape
+pentagram = Shape(72, 5)
+pentagram.first_move(scooby_the_turtle)
+pentagram.drawing_shape_function(scooby_the_turtle)
+
+# hexagon shape
+hexagon = Shape(60, 6)
+hexagon.first_move(scooby_the_turtle)
+hexagon.drawing_shape_function(scooby_the_turtle)
+
+# heptagon shape
+heptagon = Shape(180 - 128.571, 7)
+heptagon.first_move(scooby_the_turtle)
+heptagon.drawing_shape_function(scooby_the_turtle)
+
+
+# octagon shape
+octagon = Shape(45, 8)
+octagon.first_move(scooby_the_turtle)
+octagon.drawing_shape_function(scooby_the_turtle)
+
+
+# Use this way ---- make your Objects, append them to a list in the order that you want and make a simple for loop
+
+list_with_shapes = [triangle, square, pentagram, hexagon, heptagon, octagon]
+
+for some_shape in list_with_shapes:
+    some_shape.first_move(scooby_the_turtle)
+    some_shape.drawing_shape_function(scooby_the_turtle)
 
 screen = Screen()
 screen.exitonclick()
