@@ -130,6 +130,7 @@ class Shape:
             t.forward(self.FORWARD_MOVE)
         t.right(self.angle_degree)
 
+# or you can just divide 360 / number_of_shapes
 # triangle_angle = 120
 # square_angle = 90
 # pentagon_angle = 72
@@ -178,6 +179,22 @@ list_with_shapes = [triangle, square, pentagram, hexagon, heptagon, octagon]
 for some_shape in list_with_shapes:
     some_shape.first_move(scooby_the_turtle)
     some_shape.drawing_shape_function(scooby_the_turtle)
+
+
+# last easiest way :)
+
+colors = ['yellow', 'light green', 'dodger blue', 'dark orchid', 'coral', 'dim gray', 'medium violet red',
+              'dark green', 'slate blue', 'gold', 'light sea green']
+
+def draw_shape(number_of_sides):
+    angle = 360 / number_of_sides
+    for _ in range(number_of_sides):
+        scooby_the_turtle.forward(100)
+        scooby_the_turtle.right(angle)
+
+for shape_side_n in range(3, 11):
+    scooby_the_turtle.color(random.choice(colors))
+    draw_shape(shape_side_n)
 
 screen = Screen()
 screen.exitonclick()
